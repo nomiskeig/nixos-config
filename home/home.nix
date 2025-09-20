@@ -1,4 +1,5 @@
 {
+   
   config,
   nixpkgs,
   pkgs,
@@ -9,6 +10,7 @@
   ...
 }:
 let
+
 
 
   hyprlandConfig = import ./hypr {
@@ -61,7 +63,8 @@ in
     # LSP servers
     nil
     lua-language-server
-    clang
+    clang-tools
+    bear
   ];
   home.sessionVariables = {
     CC = "gcc";
