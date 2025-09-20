@@ -1,0 +1,8 @@
+[env]
+TERM = "alacritty"
+
+[terminal.shell]
+program = "/etc/profiles/per-user/simon/bin/zsh"
+args =["-l",  "-c", "tmux attach || tmux"]
+
+
