@@ -29,7 +29,7 @@
       ...
     }:
     let
-        privateData = import ./privateData.nix;
+        privateData = import /home/simon/nixos-config/privateData.nix;
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;

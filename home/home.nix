@@ -39,6 +39,7 @@ in
     enable = true;
     nix-direnv.enable = true;
   };
+  programs.lazygit.enable = true;
   home.stateVersion = "25.05";
   home.packages = with pkgs; [
     neovim
