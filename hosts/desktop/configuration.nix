@@ -80,6 +80,7 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
 # audio
+time.timeZone = "Europe/Berlin";
 security.rtkit.enable = true;
 services.pipewire = {
     enable = true;
