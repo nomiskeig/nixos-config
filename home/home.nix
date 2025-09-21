@@ -54,6 +54,7 @@ in
     inputs.zen-browser.packages.${system}.default
     spotify
     ripgrep
+    bc
     # Audio
     pavucontrol
     pamixer
