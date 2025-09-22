@@ -18,6 +18,7 @@
   programs.tmux.extraConfig = ''
      set-option -g default-terminal "xterm-256color"
      set-option -ga terminal-overrides ",alacritty:Tc"
+     set-option -g mouse on
      set -g prefix C-a
      #bind-key -n C-) next-window
     # bind-key -n C-( previous-window
