@@ -21,7 +21,7 @@ in
 
   };
   wayland.windowManager.hyprland.plugins = [
-#    pkgs.hyprlandPlugins.hyprsplit
+ #   pkgs.hyprlandPlugins.hyprsplit
   ];
   wayland.windowManager.hyprland.extraConfig = ''
      # #######################################################################################

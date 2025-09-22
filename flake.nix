@@ -9,15 +9,15 @@
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprland.url = "github:hyprwm/Hyprland";
+    #hyprland.url = "github:hyprwm/Hyprland";
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    split-monitor-workspaces = {
-      url = "github:Duckonaut/split-monitor-workspaces";
-      inputs.hyprland.follows = "hyprland"; # <- make sure this line is present for the plugin to work as intended
-    };
+    #split-monitor-workspaces = {
+    #  url = "github:Duckonaut/split-monitor-workspaces";
+    #  inputs.hyprland.follows = "hyprland"; # <- make sure this line is present for the plugin to work as intended
+    #};
   };
   outputs =
     inputs@{
@@ -25,7 +25,7 @@
       nixpkgs,
       home-manager,
       zen-browser,
-      hyprland,
+    #  hyprland,
       ...
     }:
     let
@@ -42,6 +42,7 @@
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         inherit system;
         #    pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        specialArgs = {inherit inputs;};
         modules = [
 
           ./hosts/desktop/configuration.nix
@@ -59,7 +60,7 @@
           {
             programs.hyprland = {
               enable = true;
-              package = inputs.hyprland.packages.${system}.hyprland;
+              #package = inputs.hyprland.packages.${system}.hyprland;
             };
           }
         ];
