@@ -3,6 +3,6 @@ TERM = "alacritty"
 
 [terminal.shell]
 program = "/etc/profiles/per-user/simon/bin/zsh"
-args =["-l",  "-c", "tmux attach || tmux"]
+#args =["-l",  "-c", "tmux attach || tmux"]
 
 
